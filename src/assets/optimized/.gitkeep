@@ -1,0 +1,41 @@
+# Directorio de assets optimizados para el portal transaccional
+# Este directorio almacena imágenes comprimidas, fuentes subseteadas
+# y otros recursos procesados durante el build para optimizar el rendimiento.
+#
+# El proceso de optimización incluye:
+# - Compresión de imágenes (WebP, AVIF con fallback a JPEG/PNG)
+# - Subsetting de fuentes (solo glyphs utilizados)
+# - Sprites generation para iconos vectoriales
+# - Code splitting de recursos grandes
+#
+# Archivos generados automáticamente por scripts de build:
+# - scripts/optimize-images.js: Compresión de imágenes
+# - scripts/generate-fonts.js: Subsetting de fuentes
+# - scripts/create-sprites.js: Generación de sprites
+#
+# NO editar archivos manualmente en este directorio.
+# Los cambios se perderán en el siguiente build.
+#
+# Para agregar nuevos assets:
+# 1. Colocar archivos originales en src/assets/raw/
+# 2. Ejecutar npm run optimize:images
+# 3. Los archivos optimizados se generarán aquí automáticamente
+#
+# Estructura esperada después de optimización:
+# src/assets/optimized/
+# ├── images/
+# │   ├── heroes/
+# │   ├── icons/
+# │   └── backgrounds/
+# ├── fonts/
+# │   ├── inter-latin.woff2
+# │   └── inter-latin-ext.woff2
+# └── sprites/
+#     ├── icons.svg
+#     └── ui-elements.svg
+#
+# Referencias de configuración:
+# - angular.json: assets configuration para este directorio
+# - scripts/optimize-images.js: pipeline de optimización de imágenes
+# - vite.config.ts: plugins de optimización de build
+# - package.json: scripts de optimización (optimize:images)

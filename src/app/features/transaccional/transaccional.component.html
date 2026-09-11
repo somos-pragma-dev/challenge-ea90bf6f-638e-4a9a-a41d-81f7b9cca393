@@ -1,0 +1,186 @@
+<section class="transaccional-container" role="main" aria-label="Portal de transacciones">
+  <header class="transaccional-header">
+    <h1 class="header-title">Mi Portal Transaccional</h1>
+    <nav class="header-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/dashboard" class="nav-link active">Dashboard</a></li>
+        <li><a href="/cuentas" class="nav-link">Cuentas</a></li>
+        <li><a href="/transferencias" class="nav-link">Transferencias</a></li>
+        <li><a href="/pagos" class="nav-link">Pagos</a></li>
+        <li><a href="/inversiones" class="nav-link">Inversiones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="transaccional-content">
+    <aside class="sidebar" role="complementary" aria-label="Menú lateral">
+      <div class="user-profile">
+        <app-optimized-image
+          src="/assets/images/user-avatar.png"
+          srcset="/assets/images/user-avatar-64w.png 64w, /assets/images/user-avatar-128w.png 128w, /assets/images/user-avatar-256w.png 256w"
+          sizes="(max-width: 768px) 64px, 128px"
+          alt="Avatar del usuario"
+          width="128"
+          height="128"
+          loading="eager">
+        </app-optimized-image>
+        <span class="user-name">Juan Pérez</span>
+        <span class="user-account">Cuenta: ****4521</span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li><a href="/resumen" class="menu-item">Resumen de Cuenta</a></li>
+        <li><a href="/movimientos" class="menu-item">Últimos Movimientos</a></li>
+        <li><a href="/servicios" class="menu-item">Servicios Programados</a></li>
+        <li><a href="/alertas" class="menu-item">Alertas y Notificaciones</a></li>
+        <li><a href="/soporte" class="menu-item">Soporte Técnico</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section class="balance-section" aria-labelledby="balance-title">
+        <h2 id="balance-title" class="section-title">Saldo Disponible</h2>
+        <div class="balance-card">
+          <span class="balance-amount">$124,580.00</span>
+          <span class="balance-currency">MXN</span>
+        </div>
+        <div class="balance-actions">
+          <button class="action-btn primary" aria-label="Realizar transferencia">
+            Transferir
+          </button>
+          <button class="action-btn secondary" aria-label="Pagar servicios">
+            Pagar
+          </button>
+        </div>
+      </section>
+
+      <section class="quick-actions" aria-labelledby="quick-actions-title">
+        <h2 id="quick-actions-title" class="section-title">Acciones Rápidas</h2>
+        <div class="actions-grid">
+          <button class="quick-action-card" aria-label="Recarga de teléfono">
+            <app-optimized-image
+              src="/assets/icons/phone-icon.png"
+              alt="Recarga teléfono"
+              width="48"
+              height="48"
+              loading="lazy">
+            </app-optimized-image>
+            <span>Recarga</span>
+          </button>
+          <button class="quick-action-card" aria-label="Pago de servicios">
+            <app-optimized-image
+              src="/assets/icons/bill-icon.png"
+              alt="Pago servicios"
+              width="48"
+              height="48"
+              loading="lazy">
+            </app-optimized-image>
+            <span>Servicios</span>
+          </button>
+          <button class="quick-action-card" aria-label="Inversión">
+            <app-optimized-image
+              src="/assets/icons/investment-icon.png"
+              alt="Inversión"
+              width="48"
+              height="48"
+              loading="lazy">
+            </app-optimized-image>
+            <span>Invertir</span>
+          </button>
+          <button class="quick-action-card" aria-label="Tarjetas">
+            <app-optimized-image
+              src="/assets/icons/card-icon.png"
+              alt="Tarjetas"
+              width="48"
+              height="48"
+              loading="lazy">
+            </app-optimized-image>
+            <span>Tarjetas</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="recent-transactions" aria-labelledby="transactions-title">
+        <h2 id="transactions-title" class="section-title">Transacciones Recientes</h2>
+        <div class="transactions-list">
+          <article class="transaction-item">
+            <div class="transaction-icon">
+              <app-optimized-image
+                src="/assets/icons/shopping-icon.png"
+                alt="Compra"
+                width="32"
+                height="32"
+                loading="lazy">
+              </app-optimized-image>
+            </div>
+            <div class="transaction-details">
+              <span class="transaction-merchant">Amazon México</span>
+              <time class="transaction-date" datetime="2024-01-15">15 ene 2024</time>
+            </div>
+            <span class="transaction-amount negative">-$1,250.00</span>
+          </article>
+
+          <article class="transaction-item">
+            <div class="transaction-icon">
+              <app-optimized-image
+                src="/assets/icons/salary-icon.png"
+                alt="Depósito"
+                width="32"
+                height="32"
+                loading="lazy">
+              </app-optimized-image>
+            </div>
+            <div class="transaction-details">
+              <span class="transaction-merchant">Depósito Nómina</span>
+              <time class="transaction-date" datetime="2024-01-14">14 ene 2024</time>
+            </div>
+            <span class="transaction-amount positive">+$15,000.00</span>
+          </article>
+
+          <article class="transaction-item">
+            <div class="transaction-icon">
+              <app-optimized-image
+                src="/assets/icons/utility-icon.png"
+                alt="Pago servicios"
+                width="32"
+                height="32"
+                loading="lazy">
+              </app-optimized-image>
+            </div>
+            <div class="transaction-details">
+              <span class="transaction-merchant">CFE - Pago servicios</span>
+              <time class="transaction-date" datetime="2024-01-12">12 ene 2024</time>
+            </div>
+            <span class="transaction-amount negative">-$890.50</span>
+          </article>
+
+          <article class="transaction-item">
+            <div class="transaction-icon">
+              <app-optimized-image
+                src="/assets/icons/transfer-icon.png"
+                alt="Transferencia"
+                width="32"
+                height="32"
+                loading="lazy">
+              </app-optimized-image>
+            </div>
+            <div class="transaction-details">
+              <span class="transaction-merchant">Transferencia a María</span>
+              <time class="transaction-date" datetime="2024-01-10">10 ene 2024</time>
+            </div>
+            <span class="transaction-amount negative">-$2,500.00</span>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="transaccional-footer">
+    <p>&copy; 2024 Banco Fintech. Todos los derechos reservados.</p>
+    <nav aria-label="Links legales">
+      <a href="/terminos">Términos y Condiciones</a>
+      <a href="/privacidad">Política de Privacidad</a>
+      <a href="/ayuda">Ayuda</a>
+    </nav>
+  </footer>
+</section>
